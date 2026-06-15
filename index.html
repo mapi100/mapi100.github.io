@@ -1,26 +1,121 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<title>MAPI's Website</title>
-	<link rel="stylesheet" type="text/css" href="style.css">
-	<meta name="viewport" content="width=device-width, initial-scale=0.6">
+    <meta charset="UTF-8">
+    <title>MAPI's Website</title>
+    <!-- optimizado para celulares -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <style>
+        body {
+            background-color: #f5f5dc;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            text-align: center;
+            box-sizing: border-box;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 600px;
+            padding: 30px 0;
+        }
+
+        .title {
+            font-size: 32px;
+            margin: 0 0 10px 0;
+            color: #000;
+        }
+
+        .career {
+            font-size: 20px;
+            font-weight: 500;
+            margin: 0 0 25px 0;
+            color: #111;
+        }
+
+        img {
+            max-width: 460px;
+            width: 100%;
+            height: auto;
+            border-radius: 4px;
+            margin-bottom: 25px;
+        }
+
+        .links {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 30px;
+            flex-wrap: wrap; /* para que se acomode abajo solo si la pantalla es pequeña */
+        }
+
+        /* estilo de los botones */
+        .links a {
+            display: inline-block;
+            background-color: #fff;
+            color: #000;
+            text-decoration: none;
+            padding: 10px 24px;
+            border: 1px solid #000;
+            border-radius: 4px;
+            font-size: 16px;
+            font-weight: 500;
+            transition: background-color 0.2s;
+        }
+
+        .links a:hover {
+            background-color: #eaeaea;
+        }
+
+        .contact {
+            font-size: 16px;
+            line-height: 1.5;
+            color: #333;
+            margin: 0;
+        }
+
+        /* ajustes visuales para que no se vea gigante en celulares */
+        @media (max-width: 480px) {
+            .title {
+                font-size: 26px;
+            }
+            .career {
+                font-size: 16px;
+            }
+            .links a {
+                padding: 8px 20px;
+                font-size: 15px;
+            }
+        }
+    </style>
 </head>
 <body>
-	<h1 class="title">Marco Antonio Peña Ibarra</h1>
-	<h1 class="career">B.S. in Pure Mathematics, Minor in CS @ UTRGV</h1>
-	<img src="https://i.imgur.com/Ue49bn6.jpeg" style="width:460px;"><br>
-	<div class="links">
-		<a href="https://github.com/mapi100" target="_blank">GitHub</a> 
-		<!--<a href="https://www.linkedin.com/in/marco-pe%C3%B1a-ibarra-537aa61b8/" target="_blank">LinkedIn</a>
-		-->
-		<a href="about.html" target="_blank">About</a>
-		<a href="Documents/Marco_CV.pdf" target="_blank">Resume</a>
-	</div>
-	<br>
-	<p class="contact">Contact info:
-	<br>
-	Email: marcoantonio270204@gmail.com
-	<br>
-	</p>
+
+    <div class="container">
+        <h1 class="title">Marco Antonio Peña Ibarra</h1>
+        <div class="career">B.S. in Pure Mathematics, Minor in CS @ UTRGV</div>
+        
+        <img src="https://i.imgur.com/Ue49bn6.jpeg" alt="Rubik's cubes and math books">
+        
+        <div class="links">
+            <a href="https://github.com/mapi100" target="_blank">GitHub</a> 
+            <!--<a href="https://www.linkedin.com/in/marco-pe%C3%B1a-ibarra-537aa61b8/" target="_blank">LinkedIn</a>-->
+            <a href="about.html" target="_blank">About</a>
+            <a href="Documents/Marco_CV.pdf" target="_blank">Resume</a>
+        </div>
+        
+        <p class="contact">
+            Contact info:<br>
+            Email: marcoantonio270204@gmail.com
+        </p>
+    </div>
+
 </body>
 </html>
