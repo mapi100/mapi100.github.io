@@ -2,6 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <!-- Esta línea arregla el tamaño en teléfonos -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About</title>
 
     <style>
@@ -23,12 +25,14 @@
             max-width: 900px;
             width: 85%;
             margin: auto;
+            padding: 20px;
         }
 
         img {
             width: 240px;
             height: auto;
-            border-radius: 6px; /* Suaviza ligeramente las esquinas de la foto */
+            border-radius: 6px;
+            flex-shrink: 0;
         }
 
         .bio {
@@ -54,13 +58,19 @@
             text-decoration: underline;
         }
 
-        /* Ajuste automático para pantallas pequeñas/móviles */
+        /* Ajuste automático para pantallas móviles */
         @media (max-width: 768px) {
+            body {
+                align-items: flex-start; /* Permite scroll natural si el contenido es largo */
+            }
             .container {
                 flex-direction: column;
                 text-align: center;
-                gap: 20px;
-                padding: 40px 0;
+                gap: 25px;
+                padding: 40px 20px;
+            }
+            img {
+                width: 200px; /* Un poco más pequeña en móvil para balancear */
             }
         }
     </style>
@@ -74,13 +84,13 @@
         <!-- Paragraphs -->
         <div class="bio">
             <p>
-                I hold a B.S. in Pure Mathematics with a minor in Computer Science from the University of Texas Rio Grande Valley.
+                I hold a B.S. in Pure Mathematics with a minor in Computer Science from the University of Texas Rio Grande Valley[cite: 1].
             </p>
             <p>
-                I enjoy running, playing chess, and solving Rubik's cubes.
+                I enjoy running, chess, and Rubik's cubes.
             </p>
             <p>
-                My chess accounts: chess.com and lichess — 
+                Here are my chess accounts: chess.com and lichess — 
                 <a href="https://www.chess.com/member/mapipo100" target="_blank">@mapipo100</a> — 
                 <a href="https://lichess.org/@/mapi100" target="_blank">@mapi100</a>
             </p>
